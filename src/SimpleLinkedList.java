@@ -6,19 +6,18 @@ public class SimpleLinkedList {
     public SimpleLinkedList() { // contrucotr sin valores
         this.first = null;
     }
-    public void push(Object obj){
-
-        // esta es la instacioasion de objeto Node
-        //para el nuevo nodo de la cabeceroa de la lista
-
-        Node newNode= new Node(obj);
-        // El nuevo nodo creado es el primero y luego
-        // Newnode es el nuevo primero ed la lista
-
-        newNode.setNetx(this.first);
-
-
-      }
+    public void push(Object obj) {
+        Node newNode = new Node(obj);
+        // Si la lista está vacía, el nuevo nodo es el primer nodo
+        if (this.first == null) {
+            this.first = newNode;
+        } else {
+            // Si la lista no está vacía, el nuevo nodo se enlaza al primer nodo
+            // y luego se convierte en el nuevo primer nodo
+            newNode.setNext(this.first);
+            this.first = newNode;
+        }
+    }
 
     public Node pop (){
     Node temp=this.first; //Guardo referencias de contenido en un variable temp (temperoral)
@@ -30,7 +29,7 @@ public class SimpleLinkedList {
     Node currentNode=this.first;
     Node previousNode=this.first;
 
-    while (!currentNode.vaule.equals(val)){
+    while (!currentNode.value().equals(val)){
         if(currentNode.next()==null){
     return null;
     }else {
