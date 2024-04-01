@@ -1,3 +1,5 @@
+package Udla.Qsebas.linkedlist;
+
 public class LinkedListApp {
     public static void main(String[] args){
         SimpleLinkedList list= new SimpleLinkedList();

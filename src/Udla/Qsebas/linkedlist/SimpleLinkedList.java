@@ -1,4 +1,6 @@
-import javax.management.NotificationEmitter;
+package Udla.Qsebas.linkedlist;
+
+import Udla.Qsebas.linkedlist.Node;
 
 public class SimpleLinkedList {
     private Node first; // creacion del atributo firdst
